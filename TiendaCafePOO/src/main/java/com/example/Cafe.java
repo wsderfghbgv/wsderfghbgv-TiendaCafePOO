@@ -36,6 +36,18 @@ public class Cafe {
         System.out.println("Cantidad actualizada a: " + nuevaCantidad + " kg");
     }
 
+    // Método para aplicar un descuento al precio por kilo
+    public void aplicarDescuento(double porcentaje) {
+        if (porcentaje < 0 || porcentaje > 100) {
+            System.out.println("Error: El porcentaje de descuento debe estar entre 0 y 100");
+            return;
+        }
+        double descuento = this.precioPorKilo * (porcentaje / 100.0);
+        this.precioPorKilo = this.precioPorKilo - descuento;
+        System.out.println("Descuento del " + porcentaje + "% aplicado. Nuevo precio por kilo: $" + 
+                          String.format("%.2f", this.precioPorKilo) + " COP");
+    }
+
     // Getters (opcionales, pero útiles)
     public String getNombre() {
         return nombre;
