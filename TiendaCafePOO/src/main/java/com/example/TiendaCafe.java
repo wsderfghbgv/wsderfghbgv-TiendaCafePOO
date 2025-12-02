@@ -27,7 +27,14 @@ public class TiendaCafe {
         cafe1.actualizarCantidad(35.0f);
         System.out.println("\n--- Información actualizada del Café 1 ---");
         cafe1.mostrarInformacion();
-        System.out.println("Precio total actualizado: $" + String.format("%.2f", cafe1.calcularPrecioTotal()) + " COP");
+        System.out.println("Precio total actualizado: $" + String.format("%.2f", cafe1.calcularPrecioTotal()) + " COP\n");
+
+        // Aplicar descuento a uno de los cafés
+        System.out.println("=== APLICANDO DESCUENTO AL CAFÉ 2 ===");
+        cafe2.aplicarDescuento(15.0);
+        System.out.println("\n--- Información actualizada del Café 2 con descuento ---");
+        cafe2.mostrarInformacion();
+        System.out.println("Precio total con descuento: $" + String.format("%.2f", cafe2.calcularPrecioTotal()) + " COP");
     }
 }
 
